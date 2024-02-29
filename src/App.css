@@ -43,3 +43,15 @@ ul {
 #cityState {
   color: rgb(245, 223, 187)
 }
+
+.currConditions {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.todayContainer {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem; 
+}
