@@ -5,6 +5,20 @@
   text-align: center;
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(0, 126, 167);
+  color: rgb(191, 255, 188);
+}
+
+h1 {
+  color: rgb(245, 223, 187);
+}
+
+.navContainer h3:hover {
+  color: rgb(134, 205, 130);
+}
+
 .formContainer {
   display: flex;
   flex-direction: column;
@@ -15,4 +29,17 @@
 ul {
   list-style-type: none;
   font-weight: bold;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(180, 225, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+}
+
+#cityState {
+  color: rgb(245, 223, 187)
 }

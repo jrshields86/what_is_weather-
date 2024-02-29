@@ -9,8 +9,9 @@ import axios from "axios";
 
 function App() {
   const [weather, setWeather] = useState([]);
-  const [city,setCity] = useState('');
-  const  [state, setState] = useState('');
+  const [city, setCity] = useState('');
+  const [state, setState] = useState('');
+  const [hourly, setHourly] = useState([]);
   
   const lat = 39.6536;
   const lon = -105.293;
@@ -24,20 +25,23 @@ function App() {
 
   const fetchWeather = async() => {
     const response = await axios.get(`https://api.weather.gov/points/${lat},${lon}`); 
-    const secondResponse = await axios.get(response.data.properties.forecast) 
+    console.log(response)
+    const secondResponse = await axios.get(response.data.properties.forecast); 
+    const thirdResponse = await axios.get(response.data.properties.forecastHourly);
+    console.log(thirdResponse.data.properties.periods)
     setWeather(secondResponse.data.properties.periods);
     setCity(response.data.properties.relativeLocation.properties.city);
     setState(response.data.properties.relativeLocation.properties.state);
   };
   console.log(weather);
-  console.log(city);
-  console.log(state);
+  console.log(hourly)
 
   return (
     <div>
       <h1>What is the Weather?</h1>
-      <button onClick={fetchWeather}>Submit</button>
       <Nav />
+      <button onClick={fetchWeather}>Submit</button>
+      
       
       <CurrentWeather weather={weather} fetchWeather={fetchWeather} city={city} state={state} />
       

@@ -6,7 +6,8 @@ const CurrentWeather = ({weather, city, state}) => {
     console.log(todayForecast);
     return (
         <div>
-            <h4>Current Weather for: {city}, {state}</h4>
+            <h3>Current Forecast for:</h3>
+            <h3 id="cityState">{city}, {state}</h3>
             <div className="formContainer">
                 {/* <form>
                     <label htmlFor='location'>Please Enter your Location:</label>
@@ -16,7 +17,7 @@ const CurrentWeather = ({weather, city, state}) => {
                 <ul>
                     <li>Temp: {todayForecast.temperature} Degrees F</li>
                     <br />
-                    <li>Forecast: {todayForecast.detailedForecast}</li>
+                    <li>Forecast for {todayForecast.name}: {todayForecast.detailedForecast}</li>
                     <br />
                     <li>Wind Direction: {todayForecast.windDirection}</li>
                     <br />

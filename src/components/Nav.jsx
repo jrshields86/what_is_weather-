@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const Nav = () => {
     return(
-        <div>
-            <Link><h6>Homepage</h6></Link>
-            <Link><h6>Current  Weather</h6></Link>
+        <div className="navContainer">
+            <Link><h3>Homepage</h3></Link>
+            <Link><h3>Current  Forecast</h3></Link>
         </div>
     );
 };
