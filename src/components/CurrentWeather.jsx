@@ -1,6 +1,4 @@
 const CurrentWeather = ({weather, city, state}) => {
-    console.log(city);
-    console.log(state);
     const todayForecast = weather.find( today => today.number === 1);
     if(!todayForecast){
         return null;
