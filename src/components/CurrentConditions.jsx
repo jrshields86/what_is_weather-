@@ -1,6 +1,5 @@
 const CurrentConditions = ({hourly, city, state}) => {
     const currentConditions = hourly.find( hour => hour.number === 1);
-    console.log(currentConditions);
 
     if(!currentConditions){
         return null;
@@ -12,7 +11,6 @@ const CurrentConditions = ({hourly, city, state}) => {
    
     return (
         <div>
-            <h2>Current Conditions</h2>
             <img src='{currentConditions.icon}' alt="weather icon" height='200px' width='200px' />
             <h2>{city}, {state}</h2>
             <ul className="currConditions">
