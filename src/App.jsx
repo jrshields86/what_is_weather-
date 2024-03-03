@@ -16,7 +16,6 @@ function App() {
   const [hourly, setHourly] = useState([]);
   const [inputLocation, setInputLocation] = useState('');
   
-  // const APIKey = 'f19cbf9fecb7515a5349860d1602dcb0';
   // const lat = 39.63;
   // const lon = -105.32;
   // const tempState = 'CO';
