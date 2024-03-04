@@ -4,6 +4,7 @@ import Nav from './components/Nav';
 import { Routes, Route } from 'react-router-dom';
 import axios from "axios";
 
+import Forecast from './components/Forecast';
 import Search from './components/Search';
 import CurrentWeather from './components/CurrentWeather';
 import { WEATHER_API_URL, WEATHER_API_KEY } from './components/api';
@@ -36,8 +37,9 @@ function App() {
     <div className='container'>
       <h1>What is the Weather?</h1>
       <div >
-        <Search onSearchChange={handleOnSearchChange}/>
-        <CurrentWeather data={currentWeather}/>
+        <Search onSearchChange={handleOnSearchChange} />
+        {currentWeather && <CurrentWeather data={currentWeather} />}
+        {forecast && <Forecast data={forecast} />}
       </div> 
     </div>
   );

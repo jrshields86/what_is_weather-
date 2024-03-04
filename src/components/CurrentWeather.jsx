@@ -1,9 +1,7 @@
 import '../weather.css'
 
 const CurrentWeather = ({data}) => {
-    if(!data){
-        return null;
-    }
+    
     return (
         <div className="weather">
             <div className="top">
