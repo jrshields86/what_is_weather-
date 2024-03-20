@@ -11,7 +11,7 @@ const Forecast = ({data}) => {
         console.log(data);
     return (
         <>
-            <label className="title">Daily</label>
+            <h2 className="title">7 Day Forecast</h2>
             <Accordion allowZeroExpanded>
                 {data.list.splice(0, 7).map((item, idx) => (
                  <AccordionItem key={idx}>
