@@ -31,9 +31,10 @@ function App() {
 
     <div className='container'>
       <div id='headImageContainer'>
-        <img id='headImage' src='/public/stock-photo-sun-in-a-blue-cloudy-sky.png' alt='Title icon'></img>
+        <img id='headImage' src='/stock-photo-sun-in-a-blue-cloudy-sky.png' alt='Title icon'></img>
         <h1 id='title'>Shields Weather Service</h1>
       </div>
+      
       <div >
         <Search onSearchChange={handleOnSearchChange} />
         {currentWeather && <CurrentWeather data={currentWeather} />}
