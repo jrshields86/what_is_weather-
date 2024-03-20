@@ -8,7 +8,7 @@ const Forecast = ({data}) => {
     const forecastDays = WEEK_DAYS.slice(dayInAWeek, WEEK_DAYS.length).concat(
         WEEK_DAYS.slice(0, dayInAWeek)
     );
-
+        console.log(data);
     return (
         <>
             <label className="title">Daily</label>
@@ -29,7 +29,7 @@ const Forecast = ({data}) => {
                         <div className="daily-details-grid">
                             <div className="daily-details-grid-item">
                                 <label>Pressure</label>
-                                <label>{item.main.pressure} hPa</label>
+                                <label>{(item.main.pressure * 0.025).toFixed(2)} in</label>
                             </div>
                             <div className="daily-details-grid-item">
                                 <label>Humidity</label>
@@ -40,12 +40,8 @@ const Forecast = ({data}) => {
                                 <label>{item.clouds.all}%</label>
                             </div>
                             <div className="daily-details-grid-item">
-                                <label>Wind Speed</label>
+                                <label>Wind</label>
                                 <label>{item.wind.speed} mph</label>
-                            </div>
-                            <div className="daily-details-grid-item">
-                                <label>Sea Level</label>
-                                <label>{item.main.sea_level} ft</label>
                             </div>
                             <div className="daily-details-grid-item">
                                 <label>Feels like</label>

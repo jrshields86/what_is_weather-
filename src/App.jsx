@@ -1,9 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import './App.css'
-import Nav from './components/Nav';
-import { Routes, Route } from 'react-router-dom';
 import axios from "axios";
-
 import Forecast from './components/Forecast';
 import Search from './components/Search';
 import CurrentWeather from './components/CurrentWeather';
@@ -30,12 +27,13 @@ function App() {
       .catch((err) => console.log(err));
   };
 
-  console.log(currentWeather);
-  console.log(forecast);
-
   return (
+
     <div className='container'>
-      <h1>What is the Weather?</h1>
+      <div id='headImageContainer'>
+        <img id='headImage' src='/public/stock-photo-sun-in-a-blue-cloudy-sky.png' alt='Title icon'></img>
+        <h1 id='title'>Shields Weather Service</h1>
+      </div>
       <div >
         <Search onSearchChange={handleOnSearchChange} />
         {currentWeather && <CurrentWeather data={currentWeather} />}

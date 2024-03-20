@@ -14,13 +14,11 @@ const Search = ({onSearchChange}) => {
         try {
             const response = await fetch(`${GEO_API_URL}/cities?minPopulation=1000&namePrefix=${inputValue}`, geoApiOptions);
             const result = await response.json();
-            console.log(result.data)
             return {
                 options: result.data.map((city) => {
-                    console.log(city)
                     return {
                         value: `${city.latitude} ${city.longitude}`,
-                        label: `${city.name}, ${city.countryCode}`,
+                        label: `${city.name}, ${city.region}, ${city.countryCode}`,
                     }
                 })
             }

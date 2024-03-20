@@ -31,7 +31,7 @@ const CurrentWeather = ({data}) => {
                     </div>
                     <div className='parameter-row'>
                         <span className='parameter-label'>Pressure</span>
-                        <span className='parameter-value'>{data.main.pressure} hPa</span>
+                        <span className='parameter-value'>{(data.main.pressure * 0.025).toFixed(2)} in</span>
                     </div>
                 </div>
             </div>
