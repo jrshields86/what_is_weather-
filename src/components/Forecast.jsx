@@ -8,7 +8,7 @@ const Forecast = ({data}) => {
     const forecastDays = WEEK_DAYS.slice(dayInAWeek, WEEK_DAYS.length).concat(
         WEEK_DAYS.slice(0, dayInAWeek)
     );
-        console.log(data);
+    
     return (
         <>
             <h2 className="title">7 Day Forecast</h2>
