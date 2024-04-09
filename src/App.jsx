@@ -5,6 +5,7 @@ import Forecast from './components/Forecast';
 import Search from './components/Search';
 import CurrentWeather from './components/CurrentWeather';
 import { WEATHER_API_URL, WEATHER_API_KEY } from './components/api';
+import SunriseSunset from './components/SunriseSunset';
 
 
 function App() {
@@ -33,13 +34,18 @@ function App() {
 
     <div className='container'>
       <div id='headImageContainer'>
-        <img id='headImage' src='/stock-photo-sun-in-a-blue-cloudy-sky.png' alt='Title icon'></img>
-        <h1 id='title'>Shields Weather Service</h1>
+        <div id='imageDiv'>
+          <img id='headImage' src='/stock-photo-sun-in-a-blue-cloudy-sky.png' alt='Title icon'></img>
+        </div>
+        <div>
+          <h1 id='title'>Shields Weather Service</h1>
+        </div>
       </div>
       
       <div >
         <Search onSearchChange={handleOnSearchChange} />
         {currentWeather && <CurrentWeather data={currentWeather} />}
+        {currentWeather && <SunriseSunset data={currentWeather} />}
         {forecast && <Forecast data={forecast} />}
       </div> 
     </div>
