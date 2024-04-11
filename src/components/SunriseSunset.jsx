@@ -4,15 +4,23 @@ const SunriseSunset = ({data}) => {
     console.log(data);
     const sunriseData = data.sys.sunrise;
     const sunsetData = data.sys.sunset;
-    const sunriseTime = new Date(sunriseData * 1000);
-    const sunsetTime = new Date(sunsetData * 1000);
-    const sunriseHours = sunriseTime.getHours();
-    const sunriseMinutes = sunriseTime.getMinutes();
-    const sunsetHours = sunsetTime.getHours();
-    const sunsetMinutes = sunsetTime.getMinutes();
-    const formattedSunrise = `${sunriseHours}:${sunriseMinutes} a.m.`;
-    const formattedSunset = `${sunsetHours - 12}:${sunsetMinutes} p.m.`;
-    console.log(formattedSunrise, formattedSunset);
+
+    const sunriseTime = () => {
+        const sunriseTime = new Date(sunriseData * 1000);
+        const sunriseHours = sunriseTime.getHours();
+        const sunriseMinutes = sunriseTime.getMinutes();
+        const formattedSunrise = `${sunriseHours}:${sunriseMinutes} a.m.`;
+        return formattedSunrise;
+    };
+
+    const sunsetTime = () => {
+        const sunsetTime = new Date(sunsetData * 1000);
+        const sunsetHours = sunsetTime.getHours();
+        const sunsetMinutes = sunsetTime.getMinutes();
+        const formattedSunset = `${sunsetHours - 12}:${sunsetMinutes} p.m.`;
+        return formattedSunset;
+    };
+    
     
     return (
         <>  
@@ -27,10 +35,10 @@ const SunriseSunset = ({data}) => {
                 </div>
                 <div id='middle'>
                     <div id="sunrise">
-                        {formattedSunrise}
+                        {sunriseTime()}
                     </div>
                     <div id="sunset">
-                        {formattedSunset}
+                        {sunsetTime()}
                     </div>
                 </div>
                 <div id='bottom'>
