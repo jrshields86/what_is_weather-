@@ -28,20 +28,15 @@ function App() {
       .catch((err) => console.log(err));
   };
 
-  
-
   return (
 
-    <div className='container'>
-      <div id='headImageContainer'>
+    <div className='headImageContainer'>
         <div id='imageDiv'>
           <img id='headImage' src='/stock-photo-sun-in-a-blue-cloudy-sky.png' alt='Title icon'></img>
         </div>
         <div>
           <h1 id='title'>Shields Weather Service</h1>
         </div>
-      </div>
-      
       <div >
         <Search onSearchChange={handleOnSearchChange} />
         {currentWeather && <CurrentWeather data={currentWeather} />}

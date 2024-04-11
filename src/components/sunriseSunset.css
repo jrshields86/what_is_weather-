@@ -1,5 +1,5 @@
 body {
-font-family: cursive;
+font-family: Arial, Helvetica, sans-serif;
 
 }
 
@@ -29,10 +29,4 @@ font-family: cursive;
 #top {
     margin-bottom: .75rem;
 }
- #bottom {
-    margin-bottom: 0;
- }
-
-
-
-
+ 
