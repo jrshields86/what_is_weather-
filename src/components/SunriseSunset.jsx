@@ -15,21 +15,31 @@ const SunriseSunset = ({data}) => {
     console.log(formattedSunrise, formattedSunset);
     
     return (
-        <>
-            <h2>Sunrise & Sunset</h2>
-            
+        <>  
             <div className="sunriseSunsetContainer">
-                <div id='sunriseText'>
-                    Sunrise
+                <div id='top'>
+                    <div id='sunriseText'>
+                        Sunrise
+                    </div>
+                    <div id='sunsetText'>
+                        Sunset
+                    </div>
                 </div>
-                <div id='sunsetText'>
-                    Sunset
+                <div id='middle'>
+                    <div id="sunrise">
+                        {formattedSunrise}
+                    </div>
+                    <div id="sunset">
+                        {formattedSunset}
+                    </div>
                 </div>
-                <div id="sunrise">
-                    {formattedSunrise}
-                </div>
-                <div id="sunset">
-                    {formattedSunset}
+                <div id='bottom'>
+                    <div>
+                        <img src='./public/icons/Sunrise_icon.png' alt='sunrise icon' width='100px' height='100px' />
+                    </div>
+                    <div>
+                        <img src='./public/icons/Sunset_icon.png' alt='sunset icon' width='100px' height='100px' />
+                    </div>
                 </div>
             </div>
         </>
