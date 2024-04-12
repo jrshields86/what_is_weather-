@@ -63,7 +63,7 @@
     font-size: 12;
 }
 
-@media (max-width: 415px) {
+@media (max-width: 500px) {
     .weather {
         width: 215px;
     }
