@@ -68,6 +68,10 @@
         width: 215px;
     }
 
+    .top {
+        padding-top: 1.5rem;
+    }
+
     .top, .bottom {
         flex-direction: column;
     }
