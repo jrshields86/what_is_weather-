@@ -62,3 +62,21 @@
     font-weight: 600;
     font-size: 12;
 }
+
+@media (max-width: 415px) {
+    .weather {
+        width: 215px;
+    }
+
+    .top, .bottom {
+        flex-direction: column;
+    }
+
+    .temperature {
+        margin: 0 0;
+    }
+
+    .parameter-value {
+        padding-right: 1rem;
+    }
+}
