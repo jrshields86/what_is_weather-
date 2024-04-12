@@ -32,7 +32,7 @@ function App() {
 
     <div className='headImageContainer'>
         <div id='imageDiv'>
-          <img id='headImage' src='/stock-photo-sun-in-a-blue-cloudy-sky.png' alt='Title icon'></img>
+          <img id='headImage' src='/public/sunrise_banner.jpg' alt='Title icon'></img>
         </div>
         <div>
           <h1 id='title'>Shields Weather Service</h1>

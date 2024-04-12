@@ -18,15 +18,9 @@ body {
   border: 1px solid black;
 }
 
-#headImageContainer img {
-  flex-shrink: 0;
-  min-width: 100%;
-
-}
-
-#headImage {
-  height: 25vh;
-  width: 90vw;
+#imageDiv {
+  display: flex;
+  justify-content: center;
 }
 
 h1 {
