@@ -1,12 +1,11 @@
 #root {
-  max-width: 1080px;
+  max-width: 640px;
   margin: 10px auto;
   padding: 2rem;
-  /* text-align: center; */
+  text-align: center;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
   background-color: rgb(0, 126, 167);
 }
 

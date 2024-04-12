@@ -4,6 +4,7 @@ import '../forecast.css'
 const WEEK_DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
 const Forecast = ({data}) => {
+    console.log(data);
     const dayInAWeek = new Date().getDay();
     const forecastDays = WEEK_DAYS.slice(dayInAWeek, WEEK_DAYS.length).concat(
         WEEK_DAYS.slice(0, dayInAWeek)
@@ -21,7 +22,7 @@ const Forecast = ({data}) => {
                                 <img alt="weather" className="icon-small" src={`icons/${item.weather[0].icon}.png`} />
                                 <label className="day">{forecastDays[idx]}</label>
                                 <label className="description">{item.weather[0].description}</label>
-                                <label className="min-max">{Math.round(item.main.temp_min)}°F / {Math.round(item.main.temp_max)}°F</label>
+                                <label className="min-max">{Math.round(item.main.temp)}°F</label>
                             </div>
                         </AccordionItemButton>
                     </AccordionItemHeading>

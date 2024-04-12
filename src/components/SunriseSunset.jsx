@@ -1,7 +1,6 @@
 import './sunriseSunset.css'
 
 const SunriseSunset = ({data}) => {
-    console.log(data);
     const sunriseData = data.sys.sunrise;
     const sunsetData = data.sys.sunset;
 
@@ -43,10 +42,10 @@ const SunriseSunset = ({data}) => {
                 </div>
                 <div id='bottom'>
                     <div>
-                        <img src='./public/icons/final_white_sunrise_icon.png' alt='sunrise icon' width='100px' height='100px' />
+                        <img src='./public/final_white_sunrise_icon.png' alt='sunrise icon' width='100px' height='100px' />
                     </div>
                     <div>
-                        <img src='./public/icons/final_white_sunset_icon.png' alt='sunset icon' width='100px' height='100px' />
+                        <img src='./public/final_white_sunset_icon.png' alt='sunset icon' width='100px' height='100px' />
                     </div>
                 </div>
             </div>
