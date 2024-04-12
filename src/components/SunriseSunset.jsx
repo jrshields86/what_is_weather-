@@ -42,10 +42,10 @@ const SunriseSunset = ({data}) => {
                 </div>
                 <div id='bottom'>
                     <div>
-                        <img src='./public/final_white_sunrise_icon.png' alt='sunrise icon' width='100px' height='100px' />
+                        <img src='/final_white_sunrise_icon.png' alt='sunrise icon' width='100px' height='100px' />
                     </div>
                     <div>
-                        <img src='./public/final_white_sunset_icon.png' alt='sunset icon' width='100px' height='100px' />
+                        <img src='/final_white_sunset_icon.png' alt='sunset icon' width='100px' height='100px' />
                     </div>
                 </div>
             </div>
