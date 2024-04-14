@@ -6,7 +6,7 @@
 }
 
 .daily-item {
-    background-color: rgb(222, 239, 183);
+    background-color: rgb(202, 240, 248);
     border-radius: 15px;
     height: 40px;
     margin: 5px;
@@ -35,7 +35,7 @@
 }
 
 .min-max {
-    color: #757575;
+    color: black;
 }
 
 .daily-details-grid {
