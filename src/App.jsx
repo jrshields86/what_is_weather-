@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import './App.css'
 import axios from "axios";
-import Forecast from './components/Forecast';
 import Search from './components/Search';
 import CurrentWeather from './components/CurrentWeather';
 import { WEATHER_API_URL, WEATHER_API_KEY } from './components/api';
@@ -41,7 +40,6 @@ function App() {
         <Search onSearchChange={handleOnSearchChange} />
         {currentWeather && <CurrentWeather data={currentWeather} />}
         {currentWeather && <SunriseSunset data={currentWeather} />}
-        {forecast && <Forecast data={forecast} />}
       </div> 
     </div>
   );
