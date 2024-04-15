@@ -5,6 +5,7 @@ import Search from './components/Search';
 import CurrentWeather from './components/CurrentWeather';
 import { WEATHER_API_URL, WEATHER_API_KEY } from './components/api';
 import SunriseSunset from './components/SunriseSunset';
+import Forecast from './components/Forecast';
 
 
 function App() {
@@ -39,7 +40,8 @@ function App() {
       <div >
         <Search onSearchChange={handleOnSearchChange} />
         {currentWeather && <CurrentWeather data={currentWeather} />}
-        {currentWeather && <SunriseSunset data={currentWeather} />}
+        <Forecast />
+        {/* {currentWeather && <SunriseSunset data={currentWeather} />} */}
       </div> 
     </div>
   );
