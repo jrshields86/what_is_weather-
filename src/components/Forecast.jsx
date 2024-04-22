@@ -1,13 +1,14 @@
 import '../forecast.css'
 
-const Forecast = () => {
+const Forecast = ({data}) => {
+    console.log(data.list);
+
+
     return (
         <>
             <h2 id='forecastTitle'>Five Day Forecast</h2>
             <div className="forecast">
-                <div className="forecastItem">
-                    
-                </div>
+
             </div>
         </>
     );

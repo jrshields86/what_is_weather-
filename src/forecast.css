@@ -1,14 +1,27 @@
 .forecast {
     display: flex;
-    width: 215px;
-
-}
-
-.forecastItem {
-    width: 215px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
     background-color: rgb(0, 180, 216);
     box-shadow: 10px -2px 20px 2px rgb(0 0 0 / 30%);
     border: 1px solid black;
     margin: 20px auto 20px auto;
+    border-radius: 30px;
 }
 
+.forecastItem {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1.75rem;
+    gap: 1.75rem;
+    height: 215px;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
